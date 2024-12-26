@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        \Spatie\Csp\AddCspHeaders::class;
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
